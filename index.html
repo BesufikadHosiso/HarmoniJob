@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HarmoniJob | The Psychological Persuasion Engine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans leading-relaxed">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-slate-50/80 backdrop-blur-md z-50 border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold tracking-tighter text-slate-950">HarmoniJob</h1>
+            <div class="space-x-8 font-medium text-sm hidden md:block">
+                <a href="#about" class="hover:text-blue-700 transition">About</a>
+                <a href="#how" class="hover:text-blue-700 transition">How it Works</a>
+                <a href="#why" class="hover:text-blue-700 transition">Why</a>
+            </div>
+            <button class="bg-blue-700 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-800 transition">Get Started</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-40 pb-24 px-6 text-center reveal">
+        <span class="text-blue-600 font-bold text-xs uppercase tracking-widest">Psychological Persuasion Engine</span>
+        <h2 class="text-6xl md:text-8xl font-extrabold mt-6 text-slate-950 tracking-tighter leading-tight">Stop Applying. <br> <span class="text-blue-700">Resonate.</span></h2>
+        <p class="text-xl text-slate-600 mt-8 max-w-2xl mx-auto">The first career-development tool that reverse-engineers your resume to match the unspoken psychological drivers of hiring executives.</p>
+        <button class="mt-10 bg-slate-950 text-white px-10 py-4 rounded-full font-semibold hover:bg-slate-800 transition">Start Your Strategy</button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 max-w-4xl mx-auto px-6 reveal">
+        <h3 class="text-sm font-bold text-blue-700 uppercase tracking-widest">What is HarmoniJob?</h3>
+        <p class="text-3xl font-semibold mt-4 text-slate-950">A strategic architect for your career, bridging the gap between your unique professional journey and the high-stakes requirements of modern companies.</p>
+    </section>
+
+    <!-- How it Works -->
+    <section id="how" class="py-24 bg-white reveal">
+        <div class="max-w-6xl mx-auto px-6">
+            <h3 class="text-center text-sm font-bold text-blue-700 uppercase tracking-widest mb-16">How it Works</h3>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="p-8 border border-slate-100 rounded-3xl shadow-sm">
+                    <h4 class="text-xl font-bold mb-4">Job-Fit Gap Analysis</h4>
+                    <p class="text-slate-600">We analyze job descriptions for intent, identifying the exact gap between your experience and the company's core needs.</p>
+                </div>
+                <div class="p-8 border border-slate-100 rounded-3xl shadow-sm">
+                    <h4 class="text-xl font-bold mb-4">R.I.C.E. Resume Writer</h4>
+                    <p class="text-slate-600">Rewrites your narrative from dull duties to impact-based accomplishments that trigger executive decision-making.</p>
+                </div>
+                <div class="p-8 border border-slate-100 rounded-3xl shadow-sm">
+                    <h4 class="text-xl font-bold mb-4">Interview Coach</h4>
+                    <p class="text-slate-600">Master the "pivot-and-connect" technique to handle technical gaps and turn them into strengths during your interview.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Section -->
+    <section id="why" class="py-24 max-w-4xl mx-auto px-6 reveal">
+        <h3 class="text-sm font-bold text-blue-700 uppercase tracking-widest">Why You Need It</h3>
+        <ul class="mt-8 space-y-6 text-lg text-slate-600">
+            <li>• <b>Move to the Top 1%:</b> Standard applications are ignored; HarmoniJob-optimized applications are engineered to be recognized.</li>
+            <li>• <b>Strategic Consistency:</b> Maintain your core narrative while perfectly tailoring the "packaging" for every individual role.</li>
+            <li>• <b>Master Human Influence:</b> Learn the hidden psychology of hiring to influence decision-makers without them ever feeling "sold to."</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 text-center text-slate-500 text-sm">
+        Built by Besufikad Hosiso. Harmonizing potential with opportunity.
+    </footer>
+
+    <script>
+        // Reveal animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>
